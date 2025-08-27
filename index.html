@@ -78,10 +78,27 @@
     </div>
   </header>
   <section>
-    <div class="p-6">
-      <h2 class="text-2xl font-semibold mb-4">Latest News</h2>
-      <p class="text-gray-700">Stay tuned for the latest updates and news from GMC.</p>
+    <div class="max-w-2xl mx-auto p-6">
+
+    <h1 class="text-3xl font-bold mb-6 text-center">Mini Réseau Social</h1>
+
+    <!-- Formulaire pour poster -->
+    <div class="bg-white p-4 rounded shadow mb-6">
+      <input id="pseudo" type="text" placeholder="Ton pseudo" 
+             class="w-full mb-2 px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-400">
+      <textarea id="message" placeholder="Quoi de neuf ?" rows="3"
+                class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-400 mb-2"></textarea>
+      <button id="postBtn" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
+        Poster
+      </button>
     </div>
+
+    <!-- Fil d'actualité -->
+    <div id="feed" class="space-y-4">
+      <!-- Les messages apparaîtront ici -->
+    </div>
+
+  </div>
   </section>
   <section></section>
  </main>
