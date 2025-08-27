@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>GMC - Home</title>
+ <link rel="stylesheet" href="/style.css">
+ <link rel="stylesheet" href="output.css">
+
+</head>
+<body>
+ <nav class="flex items-center justify-between px-6 py-3 bg-gray-800 text-white shadow-md">
+    
+    <!-- Menu -->
+    <ul class="flex space-x-6">
+      <li><a href="#" class="hover:text-blue-400">Home</a></li>
+      <li><a href="#" class="hover:text-blue-400">About</a></li>
+      <li><a href="#" class="hover:text-blue-400">Services</a></li>
+      <li><a href="#" class="hover:text-blue-400">Contact</a></li>
+    </ul>
+
+    <!-- Barre de recherche -->
+    <form action="#" method="get" class="flex items-center bg-gray-700 rounded-lg overflow-hidden">
+      <input type="text" name="search" placeholder="Search..."
+             class="px-3 py-1 bg-gray-700 text-white placeholder-gray-400 focus:outline-none">
+      <button type="submit" 
+              class="px-4 py-1 bg-blue-600 hover:bg-blue-700 transition">
+        Go
+      </button>
+    </form>
+
+    <!-- Profil utilisateur + Notifications -->
+    <div class="flex items-center space-x-6">
+
+      <!-- Notifications -->
+      <div class="relative cursor-pointer">
+        <span class="text-xl">🔔</span>
+        <span class="absolute -top-2 -right-2 bg-red-500 text-xs rounded-full px-2 py-0.5">
+          3
+        </span>
+      </div>
+
+      <!-- Profil -->
+      <div class="flex items-center space-x-2 cursor-pointer">
+        <img src="profile.jpg" alt="User Profile"
+             class="w-8 h-8 rounded-full border-2 border-white">
+        <span class="font-medium">Username</span>
+      </div>
+    </div>
+
+  </nav>
+
+ <main>
+  <header>
+    <div class="bg-blue-600 text-white text-center py-10">
+      <h1 class="text-4xl font-bold">Welcome to GMC</h1>
+      <p class="mt-2 text-lg">Your gateway to excellence</p>
+    </div>
+  </header>
+  <section>
+    <div class="p-6">
+      <h2 class="text-2xl font-semibold mb-4">Latest News</h2>
+      <p class="text-gray-700">Stay tuned for the latest updates and news from GMC.</p>
+    </div>
+  </section>
+  <section></section>
+ </main>
+
+ <footer>
+  <div class="bg-gray-800 text-white text-center p-4">
+    &copy; 2025 GMC. All rights reserved.
+  </div>
+ </footer>
+</body>
+</html>
