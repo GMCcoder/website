@@ -3,22 +3,22 @@
 <head>
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>GMC - Home</title>
+ <title>Portfolio de GMC</title>
  <link rel="stylesheet" href="/style.css">
  <link rel="stylesheet" href="output.css">
 
 </head>
-<body>
-<nav class="bg-gray-800 text-white px-6 py-3 shadow-md">
+<body  id="content">
+<nav class="bg-gray-800 text-white px-6 py-3 shadow-md fixed w-full z-10 top-0">
   <div class="flex justify-between items-center">
     <!-- Logo -->
     <div class="text-2xl font-bold">GMC</div>
 
     <!-- Menu desktop -->
     <ul class="hidden md:flex space-x-6">
-      <li><a href="#" class="hover:text-blue-400">Home</a></li>
-      <li><a href="#" class="hover:text-blue-400">About</a></li>
-      <li><a href="#" class="hover:text-blue-400">Services</a></li>
+      <li><a onclick="loadPage('index.html', 'content')" class="hover:text-blue-400">Accueil</a></li>
+      <li><a href="#" class="hover:text-blue-400">Apropos</a></li>
+      <li><a href="#" class="hover:text-blue-400">Projets</a></li>
       <li><a href="#" class="hover:text-blue-400">Contact</a></li>
     </ul>
 
@@ -31,11 +31,11 @@
         </svg>
       </button>
     </div>
-
+    
     <!-- Barre de recherche + profil desktop -->
     <div class="hidden md:flex items-center space-x-6">
       <form action="#" method="get" class="flex items-center bg-gray-700 rounded-lg overflow-hidden">
-        <input type="text" name="search" placeholder="Search..."
+        <input type="text" name="search" placeholder="recherche..."
                class="px-3 py-1 bg-gray-700 text-white placeholder-gray-400 focus:outline-none">
         <button type="submit" class="px-4 py-1 bg-blue-600 hover:bg-blue-700 transition">Go</button>
       </form>
@@ -49,7 +49,7 @@
         <!-- Profil -->
         <div class="flex items-center space-x-2 cursor-pointer">
           <img src="profile.jpg" alt="User Profile" class="w-8 h-8 rounded-full border-2 border-white">
-          <span class="font-medium">Username</span>
+          <span class="font-medium">Elodie ANDRIAMIARINTSOA</span>
         </div>
       </div>
     </div>
@@ -57,55 +57,91 @@
 
   <!-- Menu mobile -->
   <ul id="mobile-menu" class="hidden flex-col space-y-2 mt-2 md:hidden">
-    <li><a href="#" class="block px-2 py-1 hover:bg-gray-700 rounded">Home</a></li>
-    <li><a href="#" class="block px-2 py-1 hover:bg-gray-700 rounded">About</a></li>
-    <li><a href="#" class="block px-2 py-1 hover:bg-gray-700 rounded">Services</a></li>
+    <li><a onclick="loadPage('index.html', 'content')" class="block px-2 py-1 hover:bg-gray-700 rounded">Accueil</a></li>
+    <li><a href="#" class="block px-2 py-1 hover:bg-gray-700 rounded">Apropos</a></li>
+    <li><a href="#" class="block px-2 py-1 hover:bg-gray-700 rounded">Projets</a></li>
     <li><a href="#" class="block px-2 py-1 hover:bg-gray-700 rounded">Contact</a></li>
     <li>
       <form action="#" method="get" class="flex items-center bg-gray-700 rounded-lg overflow-hidden px-2 py-1">
-        <input type="text" name="search" placeholder="Search..."
+        <input type="text" name="search" placeholder="recherche..."
                class="px-2 py-1 bg-gray-700 text-white placeholder-gray-400 focus:outline-none w-full">
         <button type="submit" class="px-3 py-1 bg-blue-600 hover:bg-blue-700 transition">Go</button>
       </form>
     </li>
   </ul>
 </nav>
- <main>
-  <header>
+ <main class="mb-20">
+  <header class="fixed w-full z-0 top-14">
     <div class="bg-blue-600 text-white text-center py-10">
-      <h1 class="text-4xl font-bold">Welcome to GMC</h1>
-      <p class="mt-2 text-lg">Your gateway to excellence</p>
+      <h1 class="text-4xl font-bold">Bienvenue chez GMC</h1>
     </div>
   </header>
   <section>
-    <div class="max-w-2xl mx-auto p-6">
+    <div class="max-w-2xl mx-auto p-6 mt-40">
 
-    <h1 class="text-3xl font-bold mb-6 text-center">Mini Réseau Social</h1>
+    <h1 class="text-3xl font-bold mb-6 text-center">Portfolio</h1>
 
-    <!-- Formulaire pour poster -->
-    <div class="bg-white p-4 rounded shadow mb-6">
-      <input id="pseudo" type="text" placeholder="Ton pseudo" 
-             class="w-full mb-2 px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-400">
-      <textarea id="message" placeholder="Quoi de neuf ?" rows="3"
-                class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-400 mb-2"></textarea>
-      <button id="postBtn" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
-        Poster
-      </button>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <!-- Exemple de projet -->
+      <div class="bg-white rounded-lg shadow-md overflow-hidden">
+        <img src="https://www.flaticon.com/download/icon/1659098?
+        icon_id=1659098&author=181&team=181&keyword=Layers&pack=1
+        658601&style=Gradient&style_id=147&format=png&color=&colo
+        red=2&size=512&selection=1&type=standard&search=project" 
+        alt="Project 1" class="object-cover w-10 m-10">
+        <div class="p-4">
+          <h2 class="text-xl font-semibold mb-2">Projet 1</h2>
+          <p class="text-gray-600">Description du projet 1. <!--Description du projet1--> </p>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-lg shadow-md overflow-hidden">
+        <img src="https://www.flaticon.com/download/icon/1659098?
+        icon_id=1659098&author=181&team=181&keyword=Layers&pack=1
+        658601&style=Gradient&style_id=147&format=png&color=&colo
+        red=2&size=512&selection=1&type=standard&search=project" 
+        alt="Project 2" class="object-cover w-10 m-10">
+        <div class="p-4">
+          <h2 class="text-xl font-semibold mb-2">Projet 2</h2>
+          <p class="text-gray-600">Description du projet 2. <!--Description du projet2--> </p>
+        </div>
+      </div>
+
+      <!-- Ajoutez plus de projets ici -->
     </div>
-
-    <!-- Fil d'actualité -->
-    <div id="feed" class="space-y-4">
-      <!-- Les messages apparaîtront ici -->
     </div>
-
-  </div>
   </section>
-  <section></section>
+  <section>
+    <div class="max-w-2xl mx-auto p-6">
+      <h2 class="text-2xl font-bold mb-4 text-center">Contactez-moi</h2>
+      <form class="space-y-4" action="mailto:elodieandriamiarintsoa@gmail.com" method="POST" enctype="text/plain">
+        <div>
+          <label for="name" class="block text-gray-700">Nom:</label>
+          <input type="text" id="name" name="name" required class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600">
+        </div>
+        <div>
+          <label for="email" class="block text-gray-700">Email:</label>
+          <input type="email" id="email" name="email" required class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600">
+        </div>
+        <div>
+          <label for="message" class="block text-gray-700">Message:</label>
+          <textarea id="message" name="message" required rows="4" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"></textarea>
+        </div>
+        <div class="text-white px-3 py-2 rounded-lg text-center cursor-pointer hover:bg-blue-700 transition bg-blue-600">
+          <label for="fichier">Autre chose (pdf, video, image)</label>
+          <input type="file" name="fichier" id="fichier" hidden accept=".pdf,.mp4,.jpg,.png">
+        </div>
+        <button type="submit" id="btnValidForm" class="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">Envoyer</button>
+      </form>
+
+    </div>
+  </section>
+
  </main>
 
  <footer>
-  <div class="bg-gray-800 text-white text-center p-4">
-    &copy; 2025 GMC. All rights reserved.
+  <div class="bg-gray-800 text-white text-center p-4 fixed bottom-0 w-full">
+    <span class="font-bold">&ee;</span> 2025 GMC. Tout droits réservés.
   </div>
  </footer>
  <script src="script.js"></script>
