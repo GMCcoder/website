@@ -25,19 +25,27 @@ btnValidForm.addEventListener('click', (e) => {
 
 // Function to load a page into the content div
 function loadPage(page, contentId) {
+  const contentEl = document.getElementById(contentId);
+
+  // Vérifie si le contenu actuel correspond déjà à la page demandée
+  if (contentEl.getAttribute('data-current-page') === page) {
+    console.log("Vous êtes déjà sur cette page !");
+    return; // on ne recharge rien
+  }
+
+  // Sinon, on charge le nouveau contenu
   fetch(page)
     .then(response => {
-      if (!response.ok) {
-        throw new Error("Erreur de chargement : " + response.status);
-      }
+      if (!response.ok) throw new Error("Erreur de chargement : " + response.status);
       return response.text();
     })
     .then(html => {
-      document.getElementById(contentId).innerHTML = html;
+      contentEl.innerHTML = html;
+      // Met à jour l'attribut pour se souvenir de la page actuelle
+      contentEl.setAttribute('data-current-page', page);
     })
     .catch(err => {
-      document.getElementById(contentId).innerHTML =
-        "<p style='color:red;'>Impossible de charger la page.</p>";
+      contentEl.innerHTML = "<p style='color:red;'>Impossible de charger la page.</p>";
       console.error(err);
     });
 }
